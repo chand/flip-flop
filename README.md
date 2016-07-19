@@ -12,11 +12,12 @@ Our goal is to make politics easy to follow, interesting and empowering. Make a 
 ![Screenshot](app/assets/images/flip-flop.png)
 
 ##the team behind flip flop
-*[Calvin C. Ieong](https://github.com/icalving)
-*[Chand Nirankari](https://github.com/chand)
-*[Chris Praktish](https://github.com/cprakti)
-*[Diana Ozemebhoya Eromosele](https://github.com/dianaeromosele)
-*[Ted Bogin](https://github.com/tbogin)
+
+* [Calvin C. Ieong](https://github.com/icalving)
+* [Chand Nirankari](https://github.com/chand)
+* [Chris Praktish](https://github.com/cprakti)
+* [Diana Ozemebhoya Eromosele](https://github.com/dianaeromosele)
+* [Ted Bogin](https://github.com/tbogin)
 
 ##questions? comments?
 [email us](mailto:chandnirankari@gmail.com)
