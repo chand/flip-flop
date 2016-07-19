@@ -65,7 +65,7 @@ Politician.create(name: "Rick W. Allen", political_party: "Republican", title: "
 
 Politician.create(name: "Brad Ashford", political_party: "Republican", title: "U.S. Representative, Georgia", twitter_handle: "RepBradAshford", twitter_profile: "Proudly representing Georgia's 12th Congressional District", image: "brad_ashford.png")
 
-Politician.create(name: "Ralph Abraham", political_party: "Republican", title: "U.S. Representative, Louisiana", twitter_handle: "RepAbraham", twitter_profile: "Proudly representing Louisiana's 5th District. Rural family physician, veteran, farmer, pilot, former veterinarian, husband, father & grandfather.", image: "ralph_abraham")
+Politician.create(name: "Ralph Abraham", political_party: "Republican", title: "U.S. Representative, Louisiana", twitter_handle: "RepAbraham", twitter_profile: "Proudly representing Louisiana's 5th District. Rural family physician, veteran, farmer, pilot, former veterinarian, husband, father & grandfather.", image: "ralph_abraham.png")
 
 Politician.create(name: "Joe Barton", political_party: "Republican", title: "U.S. Representative, Texas", twitter_handle: "RepJoeBarton", twitter_profile: "I represent the 6th Congressional District of Texas.", image: "joe_barton.png")
 
