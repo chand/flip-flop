@@ -51,7 +51,9 @@ Politician.create(name: "Ted Cruz", political_party: "Republican", title: "U.S. 
 
 ##
 
-Politician.create(name: "Barack Obama", political_party: "Democrat", title: "Senator", twitter_handle: "BarackObama", twitter_profile: "This account is run by Organizing for Action staff. Tweets from the President are signed -bo.", image: "barack_obama.png")
+Politician.create(name: "Barack Obama", political_party: "Democrat", title: "President", twitter_handle: "BarackObama", twitter_profile: "This account is run by Organizing for Action staff. Tweets from the President are signed -bo.", image: "barack_obama.png")
+
+Politician.create(name: "Maxine Waters", political_party: "Democrat", title: "U.S. Representative, California", twitter_handle: "MaxineWaters", twitter_profile: "Proudly serving the people of California's 43rd District in Congress. Ranking Member of the House Financial Services Committee (@FSCDems).", image: "maxine_waters.png")
 
 Politician.create(name: "Robert Aderholt", political_party: "Republican", title: "U.S. Representative, Alabama", twitter_handle: "Robert_Aderholt", twitter_profile: "Proudly serving the 4th Congressional District of Alabama in Congress", image: "robert_aderholt.png")
 
