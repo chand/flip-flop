@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 20160629154119) do
     t.string   "title",                        null: false
     t.string   "twitter_handle",               null: false
     t.string   "twitter_profile",              null: false
+    t.string   "slug",                         null: false
     t.string   "tweets",          default: [],              array: true
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
