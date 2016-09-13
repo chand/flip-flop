@@ -2,7 +2,10 @@ class Politician < ActiveRecord::Base
   has_many :interests
   has_many :issues, through: :interests
 
-  validates :name, :political_party, :title, :twitter_handle, :twitter_profile, presence: true
+  validates :name, :political_party, :title, :twitter_handle, :slug, :twitter_profile, presence: true
+
+  extend FriendlyId
+  friendly_id :name, use: [:slugged, :finders]
 
   # mount_uploader :image, ImageUploader
 
@@ -97,6 +100,8 @@ class Politician < ActiveRecord::Base
     end
     result_bucket
   end
+
+
 
   def self.search(search)
     if search

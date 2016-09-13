@@ -6,6 +6,7 @@ class CreatePoliticians < ActiveRecord::Migration
       t.string :title, null: false
       t.string :twitter_handle, null: false
       t.string :twitter_profile, null: false
+      t.string :slug, null: false
       t.string :tweets, array: true, default: []
 
 
