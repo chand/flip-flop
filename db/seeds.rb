@@ -651,14 +651,19 @@ Politician.create(name: "Steve Pearce", political_party: "Republican", title: "U
 
 
 
-
-
-
 Politician.all.each do |p|
   Issue.all.each do |i|
     Interest.create(politician_id: p.id, issue_id: i.id)
   end
 end
+
+
+
+# Politician.all.each do |p|
+#   Issue.all.each do |i|
+#     Interest.create(politician_id: p.id, politician_name: p.name, issue_id: i.id)
+#   end
+# end
 
 
 

@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 20160629154119) do
   create_table "interests", force: :cascade do |t|
     t.integer  "politician_id", null: false
     t.integer  "issue_id",      null: false
-    t.string   "slug",          null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
