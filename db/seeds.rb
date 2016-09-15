@@ -162,7 +162,7 @@ Politician.create(name: "Henry Cuellar", political_party: "Democrat", title: "U.
 
 Politician.create(name: "Kathy Castor", political_party: "Democrat", title: "U.S. Representative, Florida", twitter_handle: "USRepKCastor", twitter_profile: "Tampa Bay's Congresswoman.", image: "kathy_castor.png")
 
-Politician.create(name: "Yvette D. Clarke", political_party: "Democrat", title: "U.S. Representative, New York", twitter_handle: "YvetteClarke", twitter_profile: "U.S. Representative proudly serving New York's 9th Congressional district. RT ≠ endorsement.", image: "yvette_clarke.png")
+Politician.create(name: "Yvette D. Clarke", political_party: "Democrat", title: "U.S. Representative, New York", twitter_handle: "RepYvetteClarke", twitter_profile: "U.S. Representative proudly serving New York's 9th Congressional district. RT ≠ endorsement.", image: "yvette_clarke.png")
 
 Politician.create(name: "Steve Cohen", political_party: "Democrat", title: "U.S. Representative, Tennessee", twitter_handle: "RepCohen", twitter_profile: "Congress TN-9 Memphis. Committees: Judiciary&Transport; Supporter of civil rights/liberties/women&minority issues/animal welfare. Father of TN Educ Lottery: Dem", image: "steve_cohen.png")
 
