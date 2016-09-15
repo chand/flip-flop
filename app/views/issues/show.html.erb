@@ -21,11 +21,12 @@
     <div class="politician-twitter-container">
 
         <ul class="list-unstyled">
-          <li><%= link_to image_tag(politician.image, class: "politician-image"), interest_path(@issue, :politician_id => politician.id) %></li>
+          <li><%= link_to image_tag(politician.image, class: "politician-image"), interest_path(@issue, :politician_id => politician.id, :politician_name => politician.name) %></li>
+
         </ul>
 
         <ul class="list-unstyled politician-twitter-list">
-          <li><%= link_to politician.name, interest_path(@issue, :politician_id => politician.id) %></li>   
+      <li><%= link_to politician.name, interest_path(@issue, :politician_id => politician.id, :politician_name => politician.name) %></li>     
         </ul>
 
     </div>

@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20160629154119) do
   create_table "issues", force: :cascade do |t|
     t.string   "name",                    null: false
     t.string   "keywords",   default: [],              array: true
+    t.string   "slug"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.string   "image"
@@ -93,6 +94,7 @@ ActiveRecord::Schema.define(version: 20160629154119) do
     t.string   "title",                        null: false
     t.string   "twitter_handle",               null: false
     t.string   "twitter_profile",              null: false
+    t.string   "slug",                         null: false
     t.string   "tweets",          default: [],              array: true
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false

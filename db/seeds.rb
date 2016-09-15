@@ -6,26 +6,6 @@ Issue.delete_all
 Politician.delete_all
 Interest.delete_all
 
-#   client = Twitter::REST::Client.new do |config|
-#   config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
-#   config.consumer_secret     = ENV["TWITTER_CONSUMER_SECRET"]
-#   config.access_token        = ENV["TWITTER_ACCESS_TOKEN"]
-#   config.access_token_secret = ENV["TWITTER_ACCESS_TOKEN_SECRET"]
-#   end
-
-# def client.get_all_tweets(politician)
-#   options = {:count => 250, :include_rts => true}
-#   user_timeline(politician, options)
-# end
-
-# hillary_tweets = client.get_all_tweets("hillaryclinton")
-# diana_tweets = client.get_all_tweets("lecturestobeats")
-# bernie_sanders_tweets = client.get_all_tweets("sensanders")
-# elizabeth_warren_tweets = client.get_all_tweets("senwarren")
-# donald_trump_tweets = client.get_all_tweets("realdonaldtrump")
-# paul_ryan_tweets = client.get_all_tweets("speakerryan")
-# ted_cruz_tweets = client.get_all_tweets("sentedcruz")
-
 Issue.create(name: "Gun Laws", keywords: ["second amendment", "gun", "guns", "firearms", "fire arms", "shooting", "shootings", "mass shootings", "gun violence", "endgunviolence", "disarmhate", "2nd amendment", "gun violence prevention laws", "nra", "gun show loophole", "gun show", "mass shootings"], image: "issue_twitter_gunlaws.png")
 
 Issue.create(name: "Immigration", keywords: ["immigration" "immigrant", "refugee", "refugees", "deportation", "undocumented", "undocumented immigrant", "illegal immigrant", "illegals", "border", "border control", "detention center", "amnesty", "sanctuary city", "sanctuary cities"], image: "issue_twitter_immigration.png")
@@ -51,7 +31,9 @@ Politician.create(name: "Ted Cruz", political_party: "Republican", title: "U.S. 
 
 ##
 
-Politician.create(name: "Barack Obama", political_party: "Democrat", title: "Senator", twitter_handle: "BarackObama", twitter_profile: "This account is run by Organizing for Action staff. Tweets from the President are signed -bo.", image: "barack_obama.png")
+Politician.create(name: "Barack Obama", political_party: "Democrat", title: "President", twitter_handle: "BarackObama", twitter_profile: "This account is run by Organizing for Action staff. Tweets from the President are signed -bo.", image: "barack_obama.png")
+
+Politician.create(name: "Maxine Waters", political_party: "Democrat", title: "U.S. Representative, California", twitter_handle: "maxinewaters", twitter_profile: "Proudly serving the people of California's 43rd District in Congress. Ranking Member of the House Financial Services Committee (@FSCDems).", image: "maxine_waters.png")
 
 Politician.create(name: "Robert Aderholt", political_party: "Republican", title: "U.S. Representative, Alabama", twitter_handle: "Robert_Aderholt", twitter_profile: "Proudly serving the 4th Congressional District of Alabama in Congress", image: "robert_aderholt.png")
 
@@ -180,7 +162,7 @@ Politician.create(name: "Henry Cuellar", political_party: "Democrat", title: "U.
 
 Politician.create(name: "Kathy Castor", political_party: "Democrat", title: "U.S. Representative, Florida", twitter_handle: "USRepKCastor", twitter_profile: "Tampa Bay's Congresswoman.", image: "kathy_castor.png")
 
-Politician.create(name: "Yvette D. Clarke", political_party: "Democrat", title: "U.S. Representative, New York", twitter_handle: "YvetteClarke", twitter_profile: "U.S. Representative proudly serving New York's 9th Congressional district. RT ≠ endorsement.", image: "yvette_clarke.png")
+Politician.create(name: "Yvette D. Clarke", political_party: "Democrat", title: "U.S. Representative, New York", twitter_handle: "RepYvetteClarke", twitter_profile: "U.S. Representative proudly serving New York's 9th Congressional district. RT ≠ endorsement.", image: "yvette_clarke.png")
 
 Politician.create(name: "Steve Cohen", political_party: "Democrat", title: "U.S. Representative, Tennessee", twitter_handle: "RepCohen", twitter_profile: "Congress TN-9 Memphis. Committees: Judiciary&Transport; Supporter of civil rights/liberties/women&minority issues/animal welfare. Father of TN Educ Lottery: Dem", image: "steve_cohen.png")
 
@@ -669,14 +651,19 @@ Politician.create(name: "Steve Pearce", political_party: "Republican", title: "U
 
 
 
-
-
-
 Politician.all.each do |p|
   Issue.all.each do |i|
     Interest.create(politician_id: p.id, issue_id: i.id)
   end
 end
+
+
+
+# Politician.all.each do |p|
+#   Issue.all.each do |i|
+#     Interest.create(politician_id: p.id, politician_name: p.name, issue_id: i.id)
+#   end
+# end
 
 
 

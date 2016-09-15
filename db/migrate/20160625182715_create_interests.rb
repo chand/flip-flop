@@ -3,6 +3,8 @@ class CreateInterests < ActiveRecord::Migration
     create_table :interests do |t|
       t.references :politician, null: false
       t.references :issue, null: false
+   
+     
 
       t.timestamps null: false
     end
