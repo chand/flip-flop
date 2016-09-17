@@ -5,10 +5,7 @@ class Politician < ActiveRecord::Base
   validates :name, :political_party, :title, :twitter_handle, :slug, :twitter_profile, presence: true
 
   extend FriendlyId
-  friendly_id :name, use: [:slugged, :finders]
-
-  # mount_uploader :image, ImageUploader
-
+  friendly_id :name, use: :slugged
 
   CLIENT = Twitter::REST::Client.new do |config|
     config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
@@ -56,34 +53,6 @@ class Politician < ActiveRecord::Base
       issue_tweet_count(issue)
     end
   end
-
-
-  # def tweets_per_issue(issue)
-  #   tweet_frequency = []
-  #   self.all_tweets.select do |tweet|
-  #     self.issues.select do |issue|
-  #       if issue.name == issue
-  #         issue.keywords.each do |keyword|
-  #           tweet_frequency << tweet if tweet.full_text.include?(keyword) && !tweet_frequency.include(tweet)
-  #         end
-  #     end
-  #   end
-  #   tweet_frequency.length
-  # end
-
-  # def tweet_mentions_issue(tweet, issue)
-  #   tweet_frequency = []
-  #   self.all_tweets.select do |tweet|
-  #     self.issues.select do |issue|
-  #       if issue.name == issue
-  #         issue.keywords.each do |keyword|
-  #           tweet_frequency << tweet if tweet.full_text.include?(keyword) && !tweet_frequency.include(tweet)
-  #         end
-  #       end
-  #     end
-  #   end
-  #   tweet_frequency.length
-  # end
 
   def issue_tweets(the_issue)
     result_bucket = []

@@ -37,6 +37,14 @@
 
   <div class="col-md-7">
 
+  <div class="no-tweets">
+    <% if @politician.issue_tweets(@issue.name).count == 0 %>
+      <p><%= @politician.name %> hasn't posted any tweets about <%=@issue.name%> recently.</p>
+      <p>Check back again soon for this issue, or click <%= link_to 'here', politician_path(@politician) %> to see <%=@politician.name%>'s tweets in other categories. </p>
+      <% end %>
+  </div>
+
+
 <ul class="list-unstyled">
 
   <div class="tweet-container">
