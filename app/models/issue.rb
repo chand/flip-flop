@@ -5,5 +5,5 @@ class Issue < ActiveRecord::Base
   validates :name, :slug, :keywords, presence: true
 
   extend FriendlyId
-  friendly_id :text, use: [:slugged, :history]
+  friendly_id :text, use: [:slugged, :finders]
 end
