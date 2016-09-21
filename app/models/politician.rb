@@ -5,7 +5,7 @@ class Politician < ActiveRecord::Base
   validates :name, :political_party, :title, :twitter_handle, :slug, :twitter_profile, presence: true
 
   extend FriendlyId
-  friendly_id :name, use: [:slugged, :history]
+  friendly_id :name, use: :slugged
 
   CLIENT = Twitter::REST::Client.new do |config|
     config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
