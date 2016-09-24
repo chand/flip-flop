@@ -20,7 +20,7 @@ class PoliticiansController < ApplicationController
     end
 
     #/politicion/:id/tweet_data
-    #With Friendly_ID gem added, it's now: /politicion/:slug/tweet_data
+    #With the Friendly_ID gem added, it's now: /politicion/:slug/tweet_data
     def tweet_data
       @politician = Politician.friendly.find(params[:slug])
       @issues = @politician.issues
