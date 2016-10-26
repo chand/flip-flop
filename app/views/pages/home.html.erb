@@ -1,15 +1,15 @@
 <div id="homepage-tab" class="container homepage-container">
 
     <div class="row homepage-header">
-
-      <div class="col-xs-6 homepage-header-text">
-          <p id="tagline-text">politics simplified...</p>
-          <h1 id="homepage-title-text">FLIP FLOP</h1>
-      </div>
-
-      <div class="col-xs-6 homepage-logo-container">
-        <%= image_tag("flip_flop_logo.png", class: "logo-image pull-right") %>
-      </div>
+<!-- THE "POLITICS SIMPLIED" AND "FLIP FLOP" TEXT -->
+        <div class="col-xs-6 homepage-header-text">
+            <p id="tagline-text">politics simplified...</p>
+            <h1 id="homepage-title-text">FLIP FLOP</h1>
+        </div>
+<!-- THE FLIP-FLOP LOG0 -->
+        <div class="col-xs-6 homepage-logo-container">
+          <%= image_tag("flip_flop_logo.png", class: "logo-image pull-right") %>
+        </div>
     </div>
 
     <div class="homepage-tab-container">
@@ -122,41 +122,37 @@
           
 
             <!--- TWITTER TAB -->
-
             <div class="tab-pane" id="2b">
 
               <!-- search bar container -->
-
                <div class="hidden-md hidden-lg">
                   <h5 class="text-center" id="search-header-text">search for a politician on twitter</h5>
 
                   <div id="home-search-bar-div"><%= render partial: '/pages/twitter_search', layout: false %> 
                   </div>
                 </div>
-
-
               <!-- END search bar container -->
-
               <!-- twitter header and text row -->
 
-              <div class="issue-icon-rows">
-                <div class="row">
+        <div class="issue-icon-rows">
+              <div class="row">
+                  <!-- THE TWITTER LOGO IN HOMEPAGE TWITTER TAB -->
+                    <div class="col-xs-4 col-md-2 select-issue-icons-header">
+                      <%= image_tag("twitter_logo_icon.png", class: "homepage-issue-icon-header") %>
+                    </div>
 
-                  <div class="col-xs-4 col-md-2 select-issue-icons-header">
-                    <%= image_tag("twitter_logo_icon.png", class: "homepage-issue-icon-header") %>
-                  </div>
+                    <div class="col-xs-8 col-md-10 issues-tab-heading-text">
 
-                <div class="col-xs-8 col-md-10 issues-tab-heading-text">
-                    <div class="hidden-sm hidden-xs hidden-small-search-container">
-                      <h5 class="text-center" id="search-header-text">search for a politician on twitter</h5>
+                    <!-- SEARCH FOR A POLITICIAN SECTION -->
+                        <div class="hidden-sm hidden-xs hidden-small-search-container">
+                            <h5 class="text-center" id="search-header-text">search for a politician on twitter</h5>
 
-                  <div id="home-search-bar-div"><%= render partial: '/pages/twitter_search', layout: false %> 
-                  </div>
-
-                  </div>
-
-                  <h4 class="select-issue-text text-right">select a key issue to see a politician's twitter activity</h4>
-                </div>
+                            <div id="home-search-bar-div"><%= render partial: '/pages/twitter_search', layout: false %> 
+                            </div>
+                        </div>
+                        <h4 class="select-issue-text text-right">select a key issue to see a politician's twitter activity</h4>
+                    </div>
+              <!-- END OF ROW DIV -->
               </div>             
 
               <!-- END twitter header and text row -->
@@ -190,28 +186,29 @@
                     <%= image_tag("empty_image.png", class: "homepage-issue-icon") %>
                   </div>
 
-                </div>
-                </div>
-
+            </div>
+        </div>
               <!-- END first row twitter icons - 3 icons -->
+
 
               <!-- second row twitter icons - 2 icons + invisible image -->
 
                 <div class="row">
                   
-                  <div class="col-xs-4 hidden-md hidden-sm hidden-lg hidden-xl">
-                    <%= link_to image_tag("issue_twitter_immigration.png", class: "homepage-issue-icon"), issue_path(@twitter_immigration) %>
-                  </div>
+                    <div class="col-xs-4 hidden-md hidden-sm hidden-lg hidden-xl">
+                      <%= link_to image_tag("issue_twitter_immigration.png", class: "homepage-issue-icon"), issue_path(@twitter_immigration) %>
+                    </div>
 
-                  <div class="col-xs-4 hidden-md hidden-sm hidden-lg hidden-xl">
-                    <%= link_to image_tag("issue_twitter_lgbtq.png", class: "homepage-issue-icon"), issue_path(@twitter_lgbtq) %>
-                  </div>
+                    <div class="col-xs-4 hidden-md hidden-sm hidden-lg hidden-xl">
+                      <%= link_to image_tag("issue_twitter_lgbtq.png", class: "homepage-issue-icon"), issue_path(@twitter_lgbtq) %>
+                    </div>
 
-                  <div class="col-xs-4 hidden-md hidden-sm hidden-lg hidden-xl">
-                    <%= image_tag("empty_image.png", class: "homepage-issue-icon") %>
-                  </div>
+                    <div class="col-xs-4 hidden-md hidden-sm hidden-lg hidden-xl">
+                      <%= image_tag("empty_image.png", class: "homepage-issue-icon") %>
+                    </div>
 
-                </div>      
+                </div>    
+                <!-- END OF ROW DIV -->  
 
               </div>
             </div>
@@ -219,7 +216,8 @@
             <!-- END second row twitter icons - 2 icons + invisible image -->     
 
     </div>
-    </div>
+
+</div>
   
 
 
