@@ -1,6 +1,11 @@
 class Category < ActiveRecord::Base
   has_many :subjects
 
+  validates :name, presence: true
+
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   def party_positions
     rep_category_yes = []
     rep_category_no = []

@@ -17,14 +17,21 @@ Rails.application.routes.draw do
   resources :politicians
 
   resources :legislators, only: [:index, :show]
+  # resources :categories
   resources :categories, only: [:index, :show]
  # get 'graph/index'
  # get 'graph/tweet_data', :defaults => { :format => 'json' }
+
+
 
 get '/politicians/:slug/tweet_data' => 'politicians#tweet_data', :defaults => { :format => 'json' }
 
 
 get '/legislators/:id/legislator_votes' => 'legislators#legislator_votes', :defaults => { :format => 'json' }
+
+# get '/categories/:slug' => 'categories#show'
+
+# get '/categories/:slug/category_positions' => 'categories#category_positions', :defaults => { :format => 'json' }
 
 get '/categories/:id/category_positions' => 'categories#category_positions', :defaults => { :format => 'json' }
 

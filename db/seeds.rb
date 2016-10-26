@@ -5,16 +5,25 @@
 Issue.delete_all
 Politician.delete_all
 Interest.delete_all
+Category.delete_all
 
-Issue.create(name: "Gun Laws", keywords: ["second amendment", "gun", "guns", "firearms", "fire arms", "shooting", "shootings", "mass shootings", "gun violence", "endgunviolence", "disarmhate", "2nd amendment", "gun violence prevention laws", "nra", "gun show loophole", "gun show", "mass shootings"], image: "issue_twitter_gunlaws.png")
 
-Issue.create(name: "Immigration", keywords: ["immigration" "immigrant", "refugee", "refugees", "deportation", "undocumented", "undocumented immigrant", "illegal immigrant", "illegals", "border", "border control", "detention center", "amnesty", "sanctuary city", "sanctuary cities"], image: "issue_twitter_immigration.png")
+# THE ORDER OF THE CATEGORY AND ISSUE CREATIONS ARE IMPORTANT. KEEP IN THIS ORDER. 
+Category.create(name: "Gun Laws")
+Category.create(name: "Immigration")
+Category.create(name: "LGBTQ")
+Category.create(name: "Economy")
+Category.create(name: "Healthcare")
 
-Issue.create(name: "LGBTQ", keywords: ["lgbtq", "lgbtq rights", "lgbt", "lesbian", "gay", "bisexual", "trans", "transgender", "queer", "gay marriage", "bathroom bill", "pride", "gay rights", "homophobia", "homosexual", "sexual orientation", "cys"], image: "issue_twitter_lgbtq.png")
+Issue.create(name: "Gun Laws", keywords: ENV.fetch("GUN_LAW_KEYWORDS").split(","), image: "issue_twitter_gunlaws.png")
 
-Issue.create(name: "Economy", keywords: ["economy", "tax", "taxes", "raise", "minimum wage", "raise the minimum wage", "jobs", "job", "wages", "wage", "tax break", "tax breaks", "economic", "economic policy", "economic plan", "debt", "tax plan", "recession", "surplus", "spending", "trade", "economic growth", "tax code", "tax reform", "job creation", "creates jobs", "obamanomics", "regulation", "jobs report", "jobsreport", "gdp", "trickle-down", "trickle down", "working-class", "working class", "middle class", "rich", "poor", "socialist", "socialism", "recession", "Depression", "reaganomics"], image: "issue_twitter_economy.png")
+Issue.create(name: "Immigration", keywords: ENV.fetch("IMMIGRATION_KEYWORDS").split(","), image: "issue_twitter_immigration.png")
 
-Issue.create(name: "Healthcare", keywords: ["affordable care act", "obamacare", "healthcare", "health care", "aca", "obama care", "medicare", "medicaid", "affordable coverage", "affordable care", "high quality care", "high-quality care", "healthcare premium", "insurance companies", "insurance company"], image: "issue_twitter_healthcare.png")
+Issue.create(name: "LGBTQ", keywords: ENV.fetch("LGBTQ_KEYWORDS").split(","), image: "issue_twitter_lgbtq.png")
+
+Issue.create(name: "Economy", keywords: ENV.fetch("ECONOMY_KEYWORDS").split(","), image: "issue_twitter_economy.png")
+
+Issue.create(name: "Healthcare", keywords: ENV.fetch("HEALTHCARE_KEYWORDS").split(","), image: "issue_twitter_healthcare.png")
 
 Politician.create(name: "Hillary Clinton", political_party: "Democrat", title: "Presumptive 2016 Democratic Nominee for President", twitter_handle: "hillaryclinton", twitter_profile: "Wife, mom, grandma, women+kids advocate, FLOTUS, Senator, SecState, hair icon, pantsuit aficionado, 2016 presidential candidate. Tweets from Hillary signed –H", image:'hillary_clinton.png')
 
@@ -620,35 +629,6 @@ Politician.create(name: "Joe Pitts", political_party: "Republican", title: "U.S.
 Politician.create(name: "David Price", political_party: "Democrat", title: "U.S. Representative, North Carolina", twitter_handle: "RepDavidEPrice", twitter_profile: "I represent NC's 4th Congressional District, which includes parts of Alamance, Orange, Durham, Wake, Harnett, Chatham & Cumberland counties.", image: "david_price.png")
 
 Politician.create(name: "Steve Pearce", political_party: "Republican", title: "U.S. Representative, New Mexico", twitter_handle: "RepStevePearce", twitter_profile: "I represent New Mexico's 2nd Congressional District. I am fighting to create jobs in NM and voice New Mexicans' other concerns in Washington.", image: "steve_pearce.png")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Politician.all.each do |p|

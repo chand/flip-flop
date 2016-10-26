@@ -4,12 +4,46 @@
 
 @import 'https://fonts.googleapis.com/css?family=Fjalla+One|News+Cycle:400,700&subset=latin-ext';
 
+#spin_wheel {
+  padding: 4%;
+  width: 50%;
+  height: 75%;
+  margin-top: 4%;
+  margin-left: 25%;
+}
+
 .politician-image {
   height: 15vh;  
   padding: 3%;
   margin-left: 5%;
   margin-right: 5%;
 }
+
+#politician-show-chart div {
+    color: #b0e0e6;
+    font-size: 8vmin;
+    width: 15vmin;
+    margin-bottom: 4vmin;
+    margin-left: 3%;
+    padding-left: 3%;
+    position:relative;
+    -webkit-text-fill-color: black !important;    
+}
+
+.politician-show-icon-column {
+  margin-bottom: 4vmin;
+}
+
+.politician-show-icon-image {
+  display: flex;
+  height: 15vmin;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+
 
 .politician-image-large {
   height: 20vh;  
@@ -83,9 +117,6 @@ h5.twitter-profile-content {
   margin-top: 4%;
 }
 
-.politician-show-icon-column {
-  margin-bottom: 4vmin;
-}
 
 
 .ajax-twitter-search-result-container {
@@ -93,25 +124,8 @@ h5.twitter-profile-content {
   margin-left: 7%;
 }
 
-.politician-show-icon-image {
-  display: flex;
-  height: 15vmin;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0;
-}
 
-#politician-show-chart div {
-    color: #b0e0e6;
-    font-size: 8vmin;
-    width: 15vmin;
-    margin-bottom: 4vmin;
-    margin-left: 3%;
-    padding-left: 3%;
-    position:relative;
-    -webkit-text-fill-color: black !important;    
-}
+
 
 #politician-show-chart div:hover {
   color: #b3b3b3;

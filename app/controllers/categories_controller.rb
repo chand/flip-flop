@@ -1,11 +1,12 @@
 class CategoriesController < ApplicationController
 
   def index
-
   end
 
   def show
-    @category = Category.find_by(id: params[:id])
+    @category = Category.friendly.find(params[:id])
+
+    
     # # @legislator = Legislator.find_by(id: params[:id])
     # @parties_percents = []
     # @all_positions = @category.party_positions
@@ -24,8 +25,7 @@ class CategoriesController < ApplicationController
   end
 
   def category_positions
-    @category = Category.find_by(id: params[:id])
-    # @legislator = Legislator.find_by(id: params[:id])
+    @category = Category.friendly.find(params[:id])
     @parties_percents = []
     @all_positions = @category.party_positions
       @parties_percents << @all_positions[:rep_yes]

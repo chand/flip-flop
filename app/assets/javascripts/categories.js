@@ -19,6 +19,7 @@ if($(".category-show-chart-container")) {
          url: window.location.pathname+'/category_positions',
          dataType: 'json',
          success: function(data) {
+            $("#spin_wheel").remove();
             draw(data);
          },
          error: function (xhr, status, error) {

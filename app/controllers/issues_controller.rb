@@ -7,11 +7,12 @@ class IssuesController < ApplicationController
     @twitter_lgbtq = Issue.friendly.find_by(id: 3)
     @twitter_economy = Issue.friendly.find_by(id: 4)
     @twitter_healthcare = Issue.friendly.find_by(id: 5)
-    @congress_gunlaws = Issue.find(1)
-    @congress_immigration = Issue.find(2)
-    @congress_lgbtq = Issue.find(3)
-    @congress_economy = Issue.find(4)
-    @congress_healthcare = Issue.find(5)
+
+    @congress_gunlaws = Category.friendly.find_by(id: 1)
+    @congress_immigration = Category.friendly.find_by(id: 2)
+    @congress_lgbtq = Category.friendly.find_by(id: 3)
+    @congress_economy = Category.friendly.find_by(id: 4)
+    @congress_healthcare = Category.friendly.find_by(id: 5)
   end
 
   def show
